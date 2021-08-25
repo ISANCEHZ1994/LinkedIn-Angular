@@ -1,0 +1,17 @@
+<section>
+    <header>
+      <h1>Media Watch List (Hello From The App.Componet.HTML)</h1>
+      <p class="description">Keeping Track of the media I want to watch.</p>
+    </header>
+  
+      <!-- Using from both media-item and app components we can bind our information -->
+      <!-- Variable name first then what property to give that variable -->
+      <!-- Passing it thru the item and now we can use it inside media-item HTML -->
+      <app-media-item 
+      (delete)="onMediaItemDelete($Event)"
+      [mediaItem]="firstMediaItem" 
+      ></app-media-item> <!-- NOTE: The Tag is same name as selector inside media-item.component.ts -->
+      <!-- This tag is binded witht the media obejct created in app-component.ts -->
+  
+  </section>
+  

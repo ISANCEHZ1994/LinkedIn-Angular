@@ -1,0 +1,35 @@
+<div class="border">
+    <h4>(Hello From The Media-Item.Componet.HTML)</h4>
+
+    <h2 style="color: brown;">{{ name }}</h2> <!-- Recieving this from media-item.componets.ts -->
+
+    <!-- Below are examples of Property Binding -->
+    <!-- Either way can be used for title however [textContent]="name" is commonly used -->
+    <h2 style="color:aqua" [textContent]="name"></h2> 
+    <h2 style="color:blueviolet" textContent="{{ name }}"></h2>
+
+    <!-- <div>Watched on 1/13/2016</div> -->
+    <!-- <div>{{ wasWatched() }}</div> replacing the commented out div above -->
+    <div> Watched on 9/30/2016 </div>
+    <div>Action</div>
+    <div>2016</div>
+
+    <div class="mediaItemObject">
+        <h4>{{ mediaItem.name }}</h4>
+        <div>{{ mediaItem.watchedOn }}</div>
+        <div>{{ mediaItem.category }}</div>
+        <div>{{ mediaItem.year }}</div>
+    </div>
+    
+
+    <div class="tools">
+        <!-- Also known as Event Binding -->
+        <button (click)="onDelete()"  class="delete"> 
+            Remove
+        </button>
+        <button class="details">
+            Watch
+        </button>
+    </div>
+</div>
+
